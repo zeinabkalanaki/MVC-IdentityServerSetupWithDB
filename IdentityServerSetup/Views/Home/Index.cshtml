@@ -1,0 +1,58 @@
+﻿@{
+    var version = typeof(IdentityServer4.Hosting.IdentityServerMiddleware).Assembly.GetName().Version.ToString();
+}
+
+<div class="welcome-page">
+    <div class="row page-header">
+        <div class="col-sm-10">
+            <h1>
+                <img class="icon" src="~/icon.jpg">
+                Welcome to IdentityServer4
+                <small>(version @version)</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <p>
+                IdentityServer publishes a
+                <a href="~/.well-known/openid-configuration">discovery document</a>
+                where you can find metadata and links to all the endpoints, key material, etc.
+            </p>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                Click <a href="~/grants">here</a> to manage your stored grants.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>
+                Here are links to the
+                <a href="https://github.com/identityserver/IdentityServer4">source code repository</a>,
+                and <a href="https://github.com/identityserver/IdentityServer4.Samples">ready to use samples</a>.
+            </p>
+        </div>
+    </div>
+</div>
+<hr />
+<ul>
+
+    Flow Types
+    <li class="list-group-item list-group-item-info">
+        Redirect Flow : به سمت سرور می رود
+        <ul>
+            <li>Implicit : به صفحه سرور می رود و سرور یک آیدنتیتی توکن(که شامل اطلاعات کاربر است) برمی گرداند</li>
+            <li>Authorization Code: به جای آیدنتیتی توکن یک کد برمی گرداند که در هر درخواست باید آن را به سرور ارایه داهیم تا اطلاعات کاربر را بگیریم </li>
+        </ul>
+    </li>
+    <li class="list-group-item list-group-item-danger">
+        Credential Flow : از سمت کلاینت دیتای آتنتیکشن برای سرور ارسال میشود
+        <ul>
+            <li>User Password</li>
+            <li>Client Credential : دیگر user مطرح نیست</li>
+        </ul>
+    </li>
+</ul>

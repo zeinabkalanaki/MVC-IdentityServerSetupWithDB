@@ -1,0 +1,11 @@
+﻿
+<table class="table table-bordered">
+
+    @foreach (var cliam in User.Claims)
+    {
+        <tr>
+            <td>@cliam.Type</td>
+            <td>@cliam.Value</td>
+        </tr>
+    }
+</table>
